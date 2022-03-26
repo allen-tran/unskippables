@@ -1,3 +1,9 @@
+* {
+  background-color: #7b9c98;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .App {
   text-align: center;
 }

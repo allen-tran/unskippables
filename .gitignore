@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# don't take my db creds!
+/src/config/config.json
+
 # testing
 /coverage
 
