@@ -1,1 +1,14 @@
-## an app where you can put your all time favorite songs!
+# <p align="center"> unskippables - Post Your Favorite Songs! 🌱</p>
+*Visit the official website [here](https://unskippables.herokuapp.com/)*
+
+## <p align="center">Table of Contents 🗞️</p>
+1. [Tech Stack](#tech-stack-)
+2. [Visuals](#visuals-)
+
+##  <p align="center">Tech Stack 💼</p>
+- backend: Node.js, Express.js, Amazon RDS
+- frontend: React.js
+- auth: AWS Amplify
+
+## <p align="center">Visuals ✨</p>
+- under construction
