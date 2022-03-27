@@ -1,5 +1,5 @@
 # <p align="center"> unskippables - Post Your Favorite Songs! 🌱</p>
-*A complete hub where users can create an account and post their all time favorite songs! Visit the official website [here](https://unskippables.herokuapp.com/)*
+*Visit the official website [here](https://unskippables.herokuapp.com/)*
 
 ## <p align="center">Table of Contents 🗞️</p>
 1. [Tech Stack](#tech-stack-)
