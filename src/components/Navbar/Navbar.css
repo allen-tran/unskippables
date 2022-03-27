@@ -1,3 +1,7 @@
-.special {
-    color: #4e605e
+.NavLink {
+    color: white;
+}
+.user-nav {
+    color: white;
+    background-color: bisque;
 }
