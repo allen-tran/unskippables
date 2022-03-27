@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Container, FormGroup, Label, Input, Spinner, Button } from 'reactstrap';
+import './SignIn.css';
 
 export default function SignIn(props) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
     const forms = [
         {text: "username", name: "username", callback: setUsername},
         {text: "password", name: "password", callback: setPassword}
@@ -13,6 +15,7 @@ export default function SignIn(props) {
     function formEmpty() {
         return username.length && password.length;
     }
+
     async function handleSignIn(){
         setIsLoading(true);
         try {
@@ -23,8 +26,9 @@ export default function SignIn(props) {
         }
     }
   return (
-   <Container style={{width: '300 px'}}>
-       <form style={{width: '300 px'}}>
+      <>
+   <Container className='main-container'>
+       <form >
            {forms.map((x, index) => {
                return (
                    <FormGroup key={index}>
@@ -34,7 +38,8 @@ export default function SignIn(props) {
                         name={x.name}
                         type={x.name}
                         onChange={(e)=> x.callback(e.target.value)}
-                       />
+                        style={{width:'400px'}}
+                        />
                    </FormGroup>
                )
            })}
@@ -44,12 +49,14 @@ export default function SignIn(props) {
             disabled={!formEmpty() || isLoading}
             type="submit"
             onClick={() => handleSignIn(username, password)}
+            // style={{width:'400 px'}}
             >
             {isLoading ? <Spinner color="primary" /> : "login"}
             </Button>
         </form>
             <br />
-            <a href="signup">new user? sign up here!</a>
+            <a href="signup" style={{color:"#4e605e", textDecoration:'none'}}>new user? sign up here!</a>
    </Container>
+      </>
   )
 }

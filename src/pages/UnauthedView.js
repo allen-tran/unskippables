@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import SignIn from '../components/SignIn/SignIn'
+import Navbar from '../Components/Navbar/Navbar'
+import SignIn from '../Components/SignIn/SignIn'
 
 export default function UnauthedView() {
   return (

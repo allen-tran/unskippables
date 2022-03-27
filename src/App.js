@@ -1,6 +1,6 @@
 import './App.css';
-import Footer from './components/Footer/Footer';
-import UnauthedView from './pages/UnauthedView';
+import Footer from './Components/Footer/Footer';
+import UnauthedView from './Pages/UnauthedView';
 
 function App() {
   return (
