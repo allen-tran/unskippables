@@ -10,5 +10,5 @@
 - frontend: React.js
 - auth: AWS Amplify
 
-## <p align="center">Visuals</p>
+## <p align="center">Visuals ✨</p>
 - under construction
