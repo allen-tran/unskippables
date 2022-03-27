@@ -18,14 +18,20 @@ export default function SignIn() {
     return username.length && password.length;
   }
 
-  async function handleSignIn() {
+  async function handleSignIn(event) {
     setIsLoading(true);
-    // try {
-    //   props.history.push('/');
-    // } catch (e) {
-    //   alert(e.message, 'BRO SOMETHING WENT WRONG');
-    //   setIsLoading(false);
-    // }
+    event.preventDefault();
+    const response = await fetch('https://localhost:3001/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
+    const data = await response.json();
   }
   return (
     <Container className="main-container">
