@@ -5,8 +5,8 @@ import UnauthedView from './Pages/UnauthedView';
 function App() {
   return (
     <div className="App">
-      <UnauthedView/>
-      <Footer/>
+      <UnauthedView />
+      <Footer />
     </div>
 
   );

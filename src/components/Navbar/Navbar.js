@@ -1,32 +1,32 @@
-import React from 'react'
-import "./Navbar.css";
+import React from 'react';
+import './Navbar.css';
 import * as ReactStrap from 'reactstrap';
 
-const Navbar = (props) => {
-    const navLinks = [
-        { name: "drop file", link: "drop" },
-        { name: "view files", link: "/" },
-    ];
+function Navbar(props) {
+  const navLinks = [
+    { name: 'drop file', link: 'drop' },
+    { name: 'view files', link: '/' },
+  ];
     // const [isOpen, toggleOpen] = useState(false);
 
-    return (
-        <div className="user-nav">
-            <ReactStrap.Navbar dark expand="md" variant="light">
-                <ReactStrap.NavbarBrand
-                className="logo d-flex align-items-end"
-                href="/"
-                >
-                unskippables
-                </ReactStrap.NavbarBrand>
-                <ReactStrap.Nav className="ml-auto the-nav" navbar>
-                <ReactStrap.NavLink className='special' href = "/login">
-                    {/* {props.authed && <CustomSignOut />} */}
-                    login
-                </ReactStrap.NavLink>
-                </ReactStrap.Nav>
-            </ReactStrap.Navbar>
-        </div>
-    );
-};
+  return (
+    <div className="user-nav">
+      <ReactStrap.Navbar dark expand="md" variant="light">
+        <ReactStrap.NavbarBrand
+          className="logo d-flex align-items-end"
+          href="/"
+        >
+          unskippables
+        </ReactStrap.NavbarBrand>
+        <ReactStrap.Nav className="ml-auto the-nav" navbar>
+          <ReactStrap.NavLink className="special" href="/login">
+            {/* {props.authed && <CustomSignOut />} */}
+            login
+          </ReactStrap.NavLink>
+        </ReactStrap.Nav>
+      </ReactStrap.Navbar>
+    </div>
+  );
+}
 
 export default Navbar;
