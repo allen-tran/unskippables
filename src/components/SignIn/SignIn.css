@@ -1,7 +1,13 @@
 .main-container{
-    /* max-width: fit-content; */
-    width: 300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 180px;
+    margin-bottom: auto;
 }
+
 .login-button{
     width: 40px;
 }

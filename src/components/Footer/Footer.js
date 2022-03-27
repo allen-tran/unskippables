@@ -26,6 +26,7 @@ export default function Footer() {
       <div style={style}>
         <div>
           made with
+          {' '}
           <span>♥</span>
           {' '}
           by allen tran

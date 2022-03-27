@@ -29,10 +29,13 @@ export default function SignIn() {
   }
   return (
     <Container className="main-container">
+      <div className="banner">
+        <p>log into your acccount</p>
+      </div>
       <form>
         {forms.map((x) => (
-          <FormGroup key={0}>
-            <Label>{x.text}</Label>
+          <FormGroup key={0} style={{ textAlign: 'left' }}>
+            <Label style={{ textAlign: 'left' }}>{x.text}</Label>
             <Input
               autoFocus
               name={x.name}
