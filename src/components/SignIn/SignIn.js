@@ -4,7 +4,7 @@ import {
 } from 'reactstrap';
 import './SignIn.css';
 
-export default function SignIn(props) {
+export default function SignIn() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -20,18 +20,18 @@ export default function SignIn(props) {
 
   async function handleSignIn() {
     setIsLoading(true);
-    try {
-      props.history.push('/');
-    } catch (e) {
-      alert(e.message, 'BRO SOMETHING WENT WRONG');
-      setIsLoading(false);
-    }
+    // try {
+    //   props.history.push('/');
+    // } catch (e) {
+    //   alert(e.message, 'BRO SOMETHING WENT WRONG');
+    //   setIsLoading(false);
+    // }
   }
   return (
     <Container className="main-container">
       <form>
-        {forms.map((x, index) => (
-          <FormGroup key={index}>
+        {forms.map((x) => (
+          <FormGroup key={0}>
             <Label>{x.text}</Label>
             <Input
               autoFocus

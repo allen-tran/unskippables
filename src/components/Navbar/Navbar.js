@@ -2,12 +2,12 @@ import React from 'react';
 import './Navbar.css';
 import * as ReactStrap from 'reactstrap';
 
-function Navbar(props) {
-  const navLinks = [
-    { name: 'drop file', link: 'drop' },
-    { name: 'view files', link: '/' },
-  ];
-    // const [isOpen, toggleOpen] = useState(false);
+function Navbar() {
+  // const navLinks = [
+  //   { name: 'drop file', link: 'drop' },
+  //   { name: 'view files', link: '/' },
+  // ];
+  // const [isOpen, toggleOpen] = useState(false);
 
   return (
     <div className="user-nav">
