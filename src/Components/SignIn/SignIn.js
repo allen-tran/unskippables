@@ -3,7 +3,7 @@ import {
   Container, FormGroup, Label, Input, Spinner, Button,
 } from 'reactstrap';
 import { handleSignIn } from '../../APIFunctions/User';
-import './SignIn.css';
+import './signin.css';
 import Navbar from '../Navbar/Navbar';
 
 export default function SignIn() {

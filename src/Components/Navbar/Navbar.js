@@ -1,6 +1,6 @@
 import React from 'react';
-import './Navbar.css';
 import * as ReactStrap from 'reactstrap';
+import './navbar.css';
 /* eslint-disable react/prop-types */
 function Navbar(props) {
   // const navLinks = [

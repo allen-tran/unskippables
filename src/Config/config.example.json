@@ -1,6 +1,7 @@
 {
     "config": {
       "DB": "secretness",
-      "SCHEMA": "moresecretness"
+      "USER_SCHEMA": "moresecretness",
+      "CARD_SCHEMA": "mostsecretness"
     }
   }

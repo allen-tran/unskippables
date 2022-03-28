@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const User = require('./mongo/models/user.model.js');
+const Card = require('./mongo/models/card.model.js');
 const { config } = require('../src/Config/config.json');
 
 const app = express();
@@ -52,6 +53,21 @@ app.post('/api/signin', async (req, res) => {
     res.json({ status: 'error', error: 'something went wrong signing up' });
   }
   res.json({ status: 'ok' });
+});
+
+app.post('/api/createCard', async (req, res) => {
+  console.log(req.body);
+
+  try {
+    await Card.create({
+      songName: req.body.songName,
+      description: req.body.description,
+      imageURL: req.body.imageURL,
+    });
+    res.json({ status: 'ok' });
+  } catch (err) {
+    res.json({ status: 400 });
+  }
 });
 
 app.listen(3001, () => {

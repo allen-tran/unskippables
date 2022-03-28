@@ -3,7 +3,7 @@ import {
   Container, FormGroup, Label, Input, Spinner, Button,
 } from 'reactstrap';
 import { handleSignUp } from '../../APIFunctions/User';
-import './SignUp.css';
+import './signup.css';
 
 export default function SignUp() {
   const [firstName, setFirstName] = useState('');
