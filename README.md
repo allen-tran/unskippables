@@ -19,7 +19,10 @@
 - Searching for friends and following them
 
 ## Visuals ✨
-- Dashboard View
-- Sign In View
-- Sign Up View
-- Post View
+### Dashboard View
+### Sign In View
+![ 2022-03-27 at 8 40 14 PM](https://user-images.githubusercontent.com/63386979/160322588-0c5d30ef-67af-4bae-8ae5-d1b03bc4f72b.png)
+### Sign Up View
+![ 2022-03-27 at 8 42 03 PM](https://user-images.githubusercontent.com/63386979/160322723-5d2d5415-8387-4205-b635-abbd83146781.png)
+### Post View
+
