@@ -26,7 +26,15 @@ export default function SignIn() {
   async function handleSubmit() {
     setIsLoading(true);
     const response = await handleSignIn({ username, password });
-    console.log(response);
+    const { data } = response;
+
+    if (data.user) {
+      alert('Login successful.');
+      window.location.href = '/feed';
+    } else {
+      alert('Sorry, login failed.');
+    }
+
     setIsLoading(false);
   }
 

@@ -15,16 +15,13 @@ export async function handleSignUp(cred) {
 }
 
 export async function handleSignIn(cred) {
-  console.log(cred, 'hey');
   const { username, password } = cred;
-
-  await axios.post(
+  const response = await axios.post(
     `${GENERAL_URL}/api/signin`,
     {
       username,
       password,
     },
-  ).then((res) => {
-    res.send('ok');
-  }).catch(() => 'something went wrong');
+  ).catch(() => 'something went wrong');
+  return response;
 }

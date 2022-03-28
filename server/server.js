@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const User = require('./mongo/models/user.model.js');
 
 const app = express();
@@ -42,7 +43,8 @@ app.post('/api/signin', async (req, res) => {
       password: req.body.password,
     });
     if (user) {
-      return res.json({ status: 'ok', user: true });
+      const token = jwt.sign({ username: user.username }, 'superdupersecretness');
+      return res.json({ status: 'ok', user: token });
     }
     return res.json({ status: 'error', user: false });
   } catch (err) {
