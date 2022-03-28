@@ -1,5 +1,5 @@
 # Unskippables 🌱
-## About 
+## About 🔭
 [Unskippables](https://unskippables.herokuapp.com/) is a social platform where people can post their all time favorite songs, or in other words, songs they would never skip. 
 
 ## Table of Contents 🗞️
