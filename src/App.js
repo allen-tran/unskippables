@@ -1,23 +1,22 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
-import UnauthedView from './Pages/UnauthedView';
+// import UnauthedView from './Pages/UnauthedView';
 import Navbar from './Components/Navbar/Navbar';
+import SignIn from './Components/SignIn/SignIn';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <BrowserRouter>
-        {/* <Navigation authed={authenticated}> */}
-        <div>
-          <UnauthedView />
-          {/* <UnauthedView /> */}
+        <Route path="/signin" exact component={SignIn} />
+        <Route path="/signup" exact component={SignUp} />
 
-        </div>
         <Footer />
-        {/* </Navigation> */}
+
       </BrowserRouter>
     </div>
 

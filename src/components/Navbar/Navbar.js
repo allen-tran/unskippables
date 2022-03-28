@@ -19,7 +19,7 @@ function Navbar() {
           unskippables
         </ReactStrap.NavbarBrand>
         <ReactStrap.Nav className="ml-auto the-nav" navbar>
-          <ReactStrap.NavLink className="special" href="/login">
+          <ReactStrap.NavLink className="special" href="/signin">
             {/* {props.authed && <CustomSignOut />} */}
             login
           </ReactStrap.NavLink>

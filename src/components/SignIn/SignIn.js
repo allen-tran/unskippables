@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   Container, FormGroup, Label, Input, Spinner, Button,
 } from 'reactstrap';
+import { handleSignIn } from '../../APIFunctions/User';
 import './SignIn.css';
 
 export default function SignIn() {
@@ -10,29 +11,25 @@ export default function SignIn() {
   const [isLoading, setIsLoading] = useState(false);
 
   const forms = [
-    { text: 'username', name: 'username', callback: setUsername },
-    { text: 'password', name: 'password', callback: setPassword },
+    {
+      text: 'username', name: 'username', placeholder: 'liluzivert', callback: setUsername,
+    },
+    {
+      text: 'password', name: 'password', placeholder: 'coolcatz', callback: setPassword,
+    },
   ];
 
   function formEmpty() {
     return username.length && password.length;
   }
 
-  async function handleSignIn(event) {
+  async function handleSubmit() {
     setIsLoading(true);
-    event.preventDefault();
-    const response = await fetch('https://localhost:3001/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-    });
-    const data = await response.json();
+    const response = await handleSignIn({ username, password });
+    console.log(response);
+    setIsLoading(false);
   }
+
   return (
     <Container className="main-container">
       <div className="banner">
@@ -46,6 +43,7 @@ export default function SignIn() {
               autoFocus
               name={x.name}
               type={x.name}
+              placeholder={x.placeholder}
               onChange={(e) => x.callback(e.target.value)}
               style={{ width: '400px' }}
             />
@@ -56,7 +54,7 @@ export default function SignIn() {
           className="login-button"
           disabled={!formEmpty() || isLoading}
           type="submit"
-          onClick={() => handleSignIn(username, password)}
+          onClick={() => handleSubmit()}
         >
           {isLoading ? <Spinner color="primary" /> : 'login'}
         </Button>

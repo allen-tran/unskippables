@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import {
   Container, FormGroup, Label, Input, Spinner, Button,
 } from 'reactstrap';
+import { handleSignUp } from '../../APIFunctions/User';
 import './SignUp.css';
 
-export default function SignIn() {
+export default function SignUp() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,17 +33,16 @@ export default function SignIn() {
 
   function formEmpty() {
     return username.length && password.length
-    && firstName.length && lastName.length.length && email.length;
+    && firstName.length && lastName.length && email.length;
   }
 
-  async function handleSignUp() {
+  async function handleSubmit() {
     setIsLoading(true);
-    // try {
-    //   props.history.push('/');
-    // } catch (e) {
-    //   alert(e.message, 'BRO SOMETHING WENT WRONG');
-    //   setIsLoading(false);
-    // }
+    const response = await handleSignUp({
+      firstName, lastName, email, username, password,
+    });
+    console.log(response);
+    setIsLoading(false);
   }
   return (
     <Container className="main-container">
@@ -68,13 +68,13 @@ export default function SignIn() {
           className="login-button"
           disabled={!formEmpty() || isLoading}
           type="submit"
-          onClick={() => handleSignUp(username, password)}
+          onClick={() => handleSubmit()}
         >
           {isLoading ? <Spinner color="primary" /> : "let's go!"}
         </Button>
       </form>
       <br />
-      <a href="signup" style={{ color: '#4e605e', textDecoration: 'none' }}>already part of the club? sign in silly!</a>
+      <a href="signin" style={{ color: '#4e605e', textDecoration: 'none' }}>already part of the club? sign in silly!</a>
     </Container>
   );
 }

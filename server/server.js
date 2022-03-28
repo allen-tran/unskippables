@@ -33,7 +33,7 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
-app.get('/api/signin', async (req, res) => {
+app.post('/api/signin', async (req, res) => {
   console.log(req.body);
 
   try {
