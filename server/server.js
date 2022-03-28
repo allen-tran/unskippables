@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const User = require('./mongo/models/user.model.js');
+const { config } = require('../src/Config/config.json');
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/unskippables');
+mongoose.connect(config.DB);
 
 app.get('/', (req, res) => {
   res.send('OK');

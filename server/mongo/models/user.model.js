@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { config } = require('../../../src/Config/config.json');
 
 const User = new mongoose.Schema({
   firstName: { type: String, required: true },
@@ -6,7 +7,7 @@ const User = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-}, { collection: 'user-data' });
+}, { collection: config.SCHEMA });
 
 const model = mongoose.model('UserData', User);
 

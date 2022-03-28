@@ -1,14 +1,15 @@
 import React from 'react';
 import './Navbar.css';
 import * as ReactStrap from 'reactstrap';
-
-function Navbar() {
+/* eslint-disable react/prop-types */
+function Navbar(props) {
   // const navLinks = [
   //   { name: 'drop file', link: 'drop' },
   //   { name: 'view files', link: '/' },
   // ];
   // const [isOpen, toggleOpen] = useState(false);
-
+  // const { isAuthed } = props;
+  const { authed } = props;
   return (
     <div className="user-nav">
       <ReactStrap.Navbar dark expand="md" variant="light">
@@ -19,10 +20,17 @@ function Navbar() {
           unskippables
         </ReactStrap.NavbarBrand>
         <ReactStrap.Nav className="ml-auto the-nav" navbar>
-          <ReactStrap.NavLink className="special" href="/signin">
-            {/* {props.authed && <CustomSignOut />} */}
-            login
-          </ReactStrap.NavLink>
+
+          {authed ? (
+            <ReactStrap.NavLink className="special" href="/signout">
+              sign out
+            </ReactStrap.NavLink>
+          ) : (
+            <ReactStrap.NavLink className="special" href="/signin">
+              login
+            </ReactStrap.NavLink>
+          )}
+
         </ReactStrap.Nav>
       </ReactStrap.Navbar>
     </div>
