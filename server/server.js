@@ -38,12 +38,13 @@ app.post('/api/signup', async (req, res) => {
 
 app.post('/api/signin', async (req, res) => {
   console.log(req.body);
-
+  console.log('LET ME IN BEN REED');
   try {
     const user = await User.findOne({
       username: req.body.username,
       password: req.body.password,
     });
+    console.log(user, 'hello');
     if (user) {
       const token = jwt.sign({ username: user.username }, 'superdupersecretness');
       return res.json({ status: 'ok', user: token });
@@ -61,6 +62,7 @@ app.post('/api/createCard', async (req, res) => {
   try {
     await Card.create({
       songName: req.body.songName,
+      artist: req.body.artist,
       description: req.body.description,
       imageURL: req.body.imageURL,
     });

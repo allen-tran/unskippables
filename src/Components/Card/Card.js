@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Col } from 'reactstrap';
-
+import { CardModal } from './CardModal';
 /* eslint-disable react/prop-types */
 
 export default function Card(props) {
   const {
     songTitle,
+    artist,
     description,
     imageURL,
   } = props;
@@ -14,9 +15,10 @@ export default function Card(props) {
     <Container
       className="event-card-button"
     >
-      <Col className="event-info">
-        <div className="event-title">{songTitle}</div>
+      <Col className="card-info">
+        <div className="card-title">{songTitle}</div>
         <div>
+          {artist}
           {' '}
           {description}
         </div>

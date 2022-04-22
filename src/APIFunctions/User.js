@@ -15,6 +15,7 @@ export async function handleSignUp(cred) {
 }
 
 export async function handleSignIn(cred) {
+  console.log('IM IN API FUNCTIONS');
   const { username, password } = cred;
   const response = await axios.post(
     `${GENERAL_URL}/api/signin`,
