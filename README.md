@@ -1,7 +1,8 @@
 # Unskippables 🌱
-[Unskippables](https://unskippables.herokuapp.com/) is a social platform where people can post their all time favorite songs, or in other words, songs they would never skip!
 
-![imageedit_5_5791003051](https://user-images.githubusercontent.com/63386979/170893092-4857e043-7a78-4f72-af0b-df8ad9f79e59.jpg)
+![imageedit_5_5791003051](https://user-images.githubusercontent.com/63386979/170895013-5ff00ef3-aa04-4fc2-b5f0-8f1b9648dd12.jpg)
+
+[Unskippables](https://unskippables.herokuapp.com/) is a social platform where people can post their all time favorite songs, or in other words, songs they would never skip!
 
 ## Table of Contents 🗞️
 1. [Tech Stack](#tech-stack-)
